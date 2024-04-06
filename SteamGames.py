@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from universal import *
+from temp import *
 
 class SteamGames():
 
@@ -11,7 +12,7 @@ class SteamGames():
 
     def verify_game(self, game_name) -> str:
 
-        if str(game_name).isdigit():
+        if str(game_name).isdigit(): # TODO: If an id is given as an input, verify that the id exists as a game.
             return
     
         applist_params = {"name": game_name}
@@ -20,27 +21,19 @@ class SteamGames():
         game_list = game_list['applist']['apps']
 
         for game in game_list:
-            if game_name in game['name']:
+            if game_name.upper() in game['name'].upper():
                 self.app_id = game['appid']
-                return self.app_id
+                return (f"App ID: {self.app_id}")
         else:
-            return(f"Couldn't find a game with the name '{game_name}'. Did you type it correctly?")
+            return(f"Couldn't find a game with the name '{game_name.upper()}'. Did you type it correctly?")
     
     def get_review(self, game_name) -> float: # Not ready AT ALL
 
-        #review = requests.get(f"{reviewlink}game/{game_name}")
-        #review = requests.get('https://howlongtobeat.com/game/2225')
-        #review = BeautifulSoup(review.content, 'html.parser')
-
-        #print(review)
-        return
-        # Going through the jungle...
-
-        #review = review('div', class_='c-layoutDefault_page')
-
-        review = review.select_one('c-siteReviewScore u-flexbox-column u-flexbox-alignCenter u-flexbox-justifyCenter g-text-bold c-siteReviewScore_green g-color-gray90 c-siteReviewScore_medium')
-        review = review.text.strip()
-        print(review)
+        review = requests.post("https://api.igdb.com/v4/games", 
+                                **{'headers':{"Client-ID":clientid, "Authorization": f"Bearer {access_token}"},
+                                   'data':f'search"{game_name}"; fields rating;'})
+        return(f"Rating: {str(review.json()[0]['rating'])}")
+        
 
 
 

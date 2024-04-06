@@ -5,6 +5,6 @@ steamgames = SteamGames.SteamGames()
 game_name = input("What STEAM game would you like to look for? \n")
 
 
-#steamgames.get_review("lies-of-p")
-print(f"Game: {game_name}, ID: {steamgames.verify_game(game_name)}")
+print(steamgames.get_review(game_name))
+print(steamgames.verify_game(game_name))
 
