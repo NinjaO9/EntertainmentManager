@@ -2,7 +2,9 @@
 # as it pertains to the user
 import SteamGames
 steamgames = SteamGames.SteamGames()
-game_name = input("What STEAM game would you like to look for? \n")
+#game_name = input("What STEAM game would you like to look for? \n")
+
+game_name = "Lies of P"
 
 
 print(steamgames.get_review(game_name))

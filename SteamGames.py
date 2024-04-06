@@ -1,7 +1,8 @@
-import requests
+import requests, os
 from bs4 import BeautifulSoup
-from universal import *
-from temp import *
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class SteamGames():
 
@@ -30,8 +31,9 @@ class SteamGames():
     def get_review(self, game_name) -> float: # Not ready AT ALL
 
         review = requests.post("https://api.igdb.com/v4/games", 
-                                **{'headers':{"Client-ID":clientid, "Authorization": f"Bearer {access_token}"},
-                                   'data':f'search"{game_name}"; fields rating;'})
+                                **{'headers':{"Client-ID":os.getenv('clientid'), "Authorization": f"Bearer {os.getenv('access_token')}"},
+                                   'data':f'search"{game_name}"; fields rating, platforms;'})
+        #print(review.content)
         return(f"Rating: {str(review.json()[0]['rating'])}")
         
 
