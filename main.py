@@ -4,9 +4,10 @@ import SteamGames
 steamgames = SteamGames.SteamGames()
 #game_name = input("What STEAM game would you like to look for? \n")
 
-game_name = "Lies of P"
+game_name = "Dark SOuls III"
 
+#print(f"Review: {steamgames.get_review(game_name)}")
+#print(f"Steam ID: {steamgames.verify_game(game_name)}")
+steamgames.checkplatform(3)
 
-print(steamgames.get_review(game_name))
-print(steamgames.verify_game(game_name))
 
