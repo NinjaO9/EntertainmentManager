@@ -1,4 +1,4 @@
-import requests, os, typing
+import requests
 from dotenv import load_dotenv
 from requests import post
 

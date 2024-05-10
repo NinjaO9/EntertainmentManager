@@ -9,45 +9,32 @@ class GeneralGames():
         'Client-ID': os.getenv('clientid'), 
         'Authorization': f'Bearer {os.getenv('access_token')}'
         }
-      
-    def __init__(self) -> None:
-        pass
     
     @classmethod
     def getgameid(cls, game_name):
         pass
     
+    @staticmethod
+    def formatids(platform_ids : str):
+        platform_ids = platform_ids.replace("[", "(").replace("]", ")")
+        return platform_ids
+    
+    @classmethod
+    def getgameplatforms(cls, platform_ids: str): 
+        platform_ids = cls.formatids(platform_ids)
+        count = 0
+        platforms = post('https://api.igdb.com/v4/platforms', **{'headers': cls.headers,'data': f' fields name; where id = {platform_ids};'}).json()
+        for item in platforms: # Separating the id from the name. If I want to include the ID for later purposes, remove/comment out this for loop
+            platforms[count] = item['name']
+            count += 1
+        
+        return platforms
 
     @classmethod
-    def getgamedata(cls, game_name) -> None: # Gets game data TODO: Add more data to this. Maybe make more, mini functions that are called just to make this function cleaner
+    def getgamedata(cls, game_name) -> None: # Gets game data TODO: Add more data to this, probably. Maybe some cleanup and optimizations later.
         data = {}
-        response = post('https://api.igdb.com/v4/games', **{'headers': cls.headers,'data': f'search"{game_name}"; fields *;'})
-        data['Review'] = (str(response.json()[0]['rating'])[:2] + "%")
+        response = post('https://api.igdb.com/v4/games', **{'headers': cls.headers,'data': f'search"{game_name}"; fields *;'}).json()[0]
+        data['Rating'] = (str(response['rating'])[:2] + "%")
+        data['Platforms'] = cls.getgameplatforms(str(response['platforms']))
+        
         return data
-        '''with open('oldtest.txt', 'w') as file:
-            file.write(f"platforms ids: {str(platform_ids)}")'''
-
-    @classmethod
-    def getgameplatforms(cls, game_name): # Possible temp function. I dunno if I will merge it with getgamedata
-        response = post('https://api.igdb.com/v4/games', **{'headers': cls.headers,'data': f'search"{game_name}"; fields platforms;'})
-        platform_ids = response.json()[0]['platforms']
-        with open('oldtest.txt', 'w') as file:
-            file.write(f"platforms ids: {str(platform_ids)}")
-
-    @classmethod # Trying to see the ids of different platforms
-    def getplatforms(cls): # Not all platforms are showing up? I think?
-        limit = 100 
-        offset = 0
-        console_ids = []
-        while True:
-            
-            # I asked chatgpt for help, still can't get anymore than the same 10 results ._.
-            response = post('https://api.igdb.com/v4/platforms', **{'headers':cls.headers, 'data': f';fields id; limit {limit}; offset {offset}'})
-            platforms = response.json()
-            if not platforms:
-                break  # No more results, exit the loop
-            console_ids.extend(platform["id"] for platform in platforms)
-            offset += limit  # Move to the next page
-            with open('oldtest.txt', 'w') as file:
-                file.write(f"response: {str(console_ids)}")
-                print(f"Completed!, offset: {offset}, limit: {limit}")
