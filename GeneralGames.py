@@ -35,6 +35,15 @@ class GeneralGames():
             count += 1
         return genres
 
+    @classmethod
+    def getcompanynames(cls, companyids: str) -> list:
+        companyids = cls.formatids(companyids)
+        count = 0
+        companies = post('https://api.igdb.com/v4/involved_companies', **{'headers': cls.headers,'data': 'fields company.name;' f'where id = {companyids};'}).json()
+        for company in companies:
+            companies[count] = company['company']['name']
+            count += 1
+        return companies
     
     @classmethod
     def getcover(cls, coverID) -> str:
@@ -59,7 +68,7 @@ class GeneralGames():
                 data['Has DLC'] = "No"
             data['Cover'] = cls.getcover(str(rawdata['cover']))
             data['Genre'] = cls.getgamegenres(str(rawdata['genres']))
-            #data['Developer(s)']
+            data['Developer(s)'] = cls.getcompanynames(str(rawdata['involved_companies']))
         except KeyError:
             data['Error'] = "An error occured while fetching some data!\n   It is likely that there is not enough information about this game."
         
