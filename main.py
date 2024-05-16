@@ -4,8 +4,10 @@ import SteamGames, GeneralGames
 steamgames = SteamGames.SteamGames()
 generalgames = GeneralGames.GeneralGames()
 
-game = "Dark SOuls IiI" # Test cases. Input an ID and a title
-#game = "374320"
+game = "DarK SoUlS IiI" # Test cases. Input an ID and a title
+#game = "374320" # Steam ID (DS3)
+#game = "11133" # IGDB ID (DS3)
+
 
 game_name = game.upper() # TODO: REMOVE THIS REMOVE THIS REMOVE THIS REMOVE THIS (when ready)
 t = "N" #TODO: THIS TOO THIS TOO
@@ -13,12 +15,25 @@ t = "N" #TODO: THIS TOO THIS TOO
 
 # TODO: Make an actual GUI for this, or just make a better input thing 1012
 
+def errorhandler():
+    if input("Would you like to try again? (Y/N) \n").upper() == "Y":
+        getdata(game_name=input("What game would you like to search for?\n"))
 
 def getdata(game_name) -> dict: # gotta return the dict eventually
     data = (generalgames.getgamedata(game_name))
-    print(f"Data for {game_name}:")
-    for item in data:
-        print(f"-{item}: {data[item]}")
+    if data:
+        print(f"Data for search '{game_name}':")
+        for item in data:
+            print(f"-{item}: {data[item]}")
+        try:
+            if data['Error'] != None:
+                errorhandler()
+        except KeyError:
+            pass
+    else:
+        print(f"An error occured while fetching your game request! Did you type it in correctly?")
+        errorhandler()
+        
 
 getdata(game_name)
 '''
