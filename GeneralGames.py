@@ -51,7 +51,7 @@ class GeneralGames():
         return 'https:' + cover_link.replace('thumb', 'cover_big')
 
     @classmethod
-    def getgamedata(cls, game_name) -> dict: # Gets game data TODO: Add more data to this, probably. Maybe some cleanup and optimizations later.
+    def getgamedata(cls, game_name) -> dict: # Gets game data TODO: Add more data to this, probably. Maybe some cleanup and optimizations later. Try to add a playtime counter
         data = {}
 
         try:

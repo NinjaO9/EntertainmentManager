@@ -1,0 +1,75 @@
+{
+   "Dark Souls III": {
+      "Name": "Dark Souls III",
+      "Rating": "87%",
+      "Platforms": [
+         "PC (Microsoft Windows)",
+         "Xbox One",
+         "PlayStation 4"
+      ],
+      "Has DLC": "Yes",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.jpg",
+      "Genre": [
+         "Role-playing (RPG)",
+         "Adventure"
+      ],
+      "Developer(s)": [
+         "Bandai Namco Entertainment",
+         "FromSoftware"
+      ]
+   },
+   "Super Mario Bros. Wonder": {
+      "Name": "Super Mario Bros. Wonder",
+      "Rating": "88%",
+      "Platforms": [
+         "Nintendo Switch"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nnl.jpg",
+      "Genre": [
+         "Platform"
+      ],
+      "Developer(s)": [
+         "Nintendo",
+         "Nintendo EPD"
+      ]
+   },
+   "Pikmin 3": {
+      "Name": "Pikmin 3",
+      "Rating": "79%",
+      "Platforms": [
+         "Wii U"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p9e.jpg",
+      "Genre": [
+         "Real Time Strategy (RTS)",
+         "Adventure"
+      ],
+      "Developer(s)": [
+         "Nintendo EAD Software Development Group No.4",
+         "Nintendo"
+      ]
+   },
+   "Hollow Knight": {
+      "Name": "Hollow Knight",
+      "Rating": "92%",
+      "Platforms": [
+         "PC (Microsoft Windows)",
+         "Wii U",
+         "Nintendo Switch",
+         "Mac",
+         "Linux"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rgi.jpg",
+      "Genre": [
+         "Platform",
+         "Adventure",
+         "Indie"
+      ],
+      "Developer(s)": [
+         "Team Cherry"
+      ]
+   }
+}
