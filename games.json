@@ -1,75 +1,69 @@
 {
-   "Dark Souls III": {
-      "Name": "Dark Souls III",
-      "Rating": "87%",
+   "Sekiro: Shadows Die Twice": {
+      "Name": "Sekiro: Shadows Die Twice",
+      "Rating": "90%",
       "Platforms": [
          "PC (Microsoft Windows)",
-         "Xbox One",
-         "PlayStation 4"
-      ],
-      "Has DLC": "Yes",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.jpg",
-      "Genre": [
-         "Role-playing (RPG)",
-         "Adventure"
-      ],
-      "Developer(s)": [
-         "Bandai Namco Entertainment",
-         "FromSoftware"
-      ]
-   },
-   "Super Mario Bros. Wonder": {
-      "Name": "Super Mario Bros. Wonder",
-      "Rating": "88%",
-      "Platforms": [
-         "Nintendo Switch"
+         "Google Stadia",
+         "PlayStation 4",
+         "Xbox One"
       ],
       "Has DLC": "No",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nnl.jpg",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a23.jpg",
       "Genre": [
+         "Adventure",
+         "Hack and slash/Beat 'em up"
+      ],
+      "Developer(s)": [
+         "FromSoftware",
+         "Activision"
+      ]
+   },
+   "Mario Bros.": {
+      "Name": "Mario Bros.",
+      "Rating": "54%",
+      "Platforms": [
+         "Wii U",
+         "Nintendo Entertainment System",
+         "Nintendo 3DS",
+         "Family Computer",
+         "Arcade",
+         "Wii"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co42ph.jpg",
+      "Genre": [
+         "Arcade",
          "Platform"
       ],
       "Developer(s)": [
-         "Nintendo",
-         "Nintendo EPD"
-      ]
-   },
-   "Pikmin 3": {
-      "Name": "Pikmin 3",
-      "Rating": "79%",
-      "Platforms": [
-         "Wii U"
-      ],
-      "Has DLC": "No",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1p9e.jpg",
-      "Genre": [
-         "Real Time Strategy (RTS)",
-         "Adventure"
-      ],
-      "Developer(s)": [
-         "Nintendo EAD Software Development Group No.4",
+         "Nintendo R&D2",
+         "Intelligent Systems",
          "Nintendo"
       ]
    },
-   "Hollow Knight": {
-      "Name": "Hollow Knight",
-      "Rating": "92%",
+   "Batman: Arkham Asylum": {
+      "Name": "Batman: Arkham Asylum",
+      "Rating": "85%",
       "Platforms": [
          "PC (Microsoft Windows)",
-         "Wii U",
-         "Nintendo Switch",
+         "PlayStation 3",
+         "Xbox 360",
          "Mac",
-         "Linux"
+         "Ouya",
+         "Nintendo Switch"
       ],
       "Has DLC": "No",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rgi.jpg",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voj.jpg",
       "Genre": [
-         "Platform",
          "Adventure",
-         "Indie"
+         "Hack and slash/Beat 'em up"
       ],
       "Developer(s)": [
-         "Team Cherry"
+         "Eidos Interactive",
+         "Playcast-media",
+         "Rocksteady Studios",
+         "Warner Bros. Interactive Entertainment"
       ]
    }
 }
