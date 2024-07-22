@@ -11,59 +11,106 @@
       "Has DLC": "No",
       "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a23.jpg",
       "Genre": [
-         "Adventure",
-         "Hack and slash/Beat 'em up"
+         "Hack and slash/Beat 'em up",
+         "Adventure"
       ],
       "Developer(s)": [
          "FromSoftware",
          "Activision"
       ]
    },
-   "Mario Bros.": {
-      "Name": "Mario Bros.",
-      "Rating": "54%",
+   "Super Mario Bros. Wonder": {
+      "Name": "Super Mario Bros. Wonder",
+      "Rating": "88%",
       "Platforms": [
-         "Wii U",
-         "Nintendo Entertainment System",
-         "Nintendo 3DS",
-         "Family Computer",
-         "Arcade",
-         "Wii"
-      ],
-      "Has DLC": "No",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co42ph.jpg",
-      "Genre": [
-         "Arcade",
-         "Platform"
-      ],
-      "Developer(s)": [
-         "Nintendo R&D2",
-         "Intelligent Systems",
-         "Nintendo"
-      ]
-   },
-   "Batman: Arkham Asylum": {
-      "Name": "Batman: Arkham Asylum",
-      "Rating": "85%",
-      "Platforms": [
-         "PC (Microsoft Windows)",
-         "PlayStation 3",
-         "Xbox 360",
-         "Mac",
-         "Ouya",
          "Nintendo Switch"
       ],
       "Has DLC": "No",
-      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voj.jpg",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6nnl.jpg",
       "Genre": [
-         "Adventure",
-         "Hack and slash/Beat 'em up"
+         "Platform"
       ],
       "Developer(s)": [
-         "Eidos Interactive",
-         "Playcast-media",
-         "Rocksteady Studios",
-         "Warner Bros. Interactive Entertainment"
+         "Nintendo",
+         "Nintendo EPD Production Group No. 10"
+      ]
+   },
+   "Elden Ring": {
+      "Name": "Elden Ring",
+      "Rating": "95%",
+      "Platforms": [
+         "PC (Microsoft Windows)",
+         "PlayStation 5",
+         "Xbox Series X|S",
+         "PlayStation 4",
+         "Xbox One"
+      ],
+      "Has DLC": "Yes",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg",
+      "Genre": [
+         "Role-playing (RPG)",
+         "Adventure"
+      ],
+      "Developer(s)": [
+         "Bandai Namco Entertainment",
+         "FromSoftware"
+      ]
+   },
+   "Mario & Sonic at the Olympic Winter Games": {
+      "Name": "Mario & Sonic at the Olympic Winter Games",
+      "Rating": "68%",
+      "Platforms": [
+         "Wii"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wvr.jpg",
+      "Genre": [
+         "Sport"
+      ],
+      "Developer(s)": [
+         "Nintendo",
+         "Sega Sports R&D",
+         "Sega"
+      ]
+   },
+   "Hollow Knight": {
+      "Name": "Hollow Knight",
+      "Rating": "92%",
+      "Platforms": [
+         "PC (Microsoft Windows)",
+         "Wii U",
+         "Linux",
+         "Mac",
+         "Nintendo Switch"
+      ],
+      "Has DLC": "No",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rgi.jpg",
+      "Genre": [
+         "Platform",
+         "Adventure",
+         "Indie"
+      ],
+      "Developer(s)": [
+         "Team Cherry"
+      ]
+   },
+   "Dark Souls III": {
+      "Name": "Dark Souls III",
+      "Rating": "87%",
+      "Platforms": [
+         "PC (Microsoft Windows)",
+         "PlayStation 4",
+         "Xbox One"
+      ],
+      "Has DLC": "Yes",
+      "Cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.jpg",
+      "Genre": [
+         "Role-playing (RPG)",
+         "Adventure"
+      ],
+      "Developer(s)": [
+         "Bandai Namco Entertainment",
+         "FromSoftware"
       ]
    }
 }
